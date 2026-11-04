@@ -1,0 +1,680 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ashu Maurya | Personal Portfolio</title>
+<meta name="description" content="Ashu Maurya - B.Tech student and aspiring Software Developer. Explore my education, skills, projects and portfolio.">
+<meta name="author" content="Ashu Maurya">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --blue: #38bdf8;
+    --dark: #081120;
+    --card: #111e32;
+    --muted: #bdc9d9;
+    --border: #263750;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--dark);
+    color: #f8fafc;
+    font-size: 22px;
+    line-height: 1.8;
+}
+
+.container {
+    width: 92%;
+    max-width: 1250px;
+    margin: auto;
+}
+
+/* NAVIGATION */
+
+header {
+    background: #0d192b;
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.logo {
+    color: var(--blue);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 17px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: var(--blue);
+}
+
+/* SECTIONS */
+
+section {
+    padding: 95px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 42px;
+    line-height: 1.4;
+    margin-bottom: 48px;
+}
+
+.section-title span {
+    color: var(--blue);
+}
+
+/* HOME */
+
+.hero {
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 950px;
+    margin: auto;
+}
+
+.profile-photo {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    border: 4px solid var(--blue);
+    margin-bottom: 30px;
+    box-shadow: 0 0 28px #38bdf855;
+}
+
+.hero h1 {
+    font-size: 50px;
+    line-height: 1.3;
+    margin-bottom: 18px;
+}
+
+.hero h1 span {
+    color: var(--blue);
+}
+
+.hero h2 {
+    color: var(--muted);
+    font-size: 27px;
+    margin-bottom: 22px;
+}
+
+.hero p {
+    color: var(--muted);
+    font-size: 22px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--blue);
+    color: #081120;
+    padding: 15px 30px;
+    margin: 30px 9px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--blue);
+    border: 1px solid var(--blue);
+}
+
+/* CARDS */
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 32px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--blue);
+}
+
+.card h3 {
+    color: var(--blue);
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: var(--muted);
+    font-size: 21px;
+    margin-bottom: 9px;
+}
+
+/* ABOUT */
+
+.about-text {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-text p {
+    font-size: 22px;
+    line-height: 1.9;
+    margin-bottom: 14px;
+}
+
+/* GRID */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+}
+
+/* SKILLS */
+
+.skill {
+    margin-bottom: 30px;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.progress {
+    height: 15px;
+    background: var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress div {
+    height: 100%;
+    background: var(--blue);
+    border-radius: 10px;
+}
+
+/* CONTACT */
+
+.contact-box {
+    max-width: 750px;
+    margin: auto;
+}
+
+.contact-intro {
+    text-align: center;
+    color: var(--muted);
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.contact-box input,
+.contact-box textarea {
+    width: 100%;
+    padding: 17px;
+    margin: 12px 0;
+    background: #0d192b;
+    border: 1px solid #334963;
+    border-radius: 8px;
+    color: white;
+    font-size: 19px;
+    font-family: Arial, sans-serif;
+}
+
+.contact-box input:focus,
+.contact-box textarea:focus {
+    outline: 1px solid var(--blue);
+    border-color: var(--blue);
+}
+
+.contact-box textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.contact-box button {
+    width: 100%;
+    padding: 17px;
+    background: var(--blue);
+    color: #081120;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-box button:hover {
+    background: white;
+}
+
+.whatsapp {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    color: #4ade80;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+    background: #0d192b;
+    text-align: center;
+    padding: 32px;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    font-size: 18px;
+}
+
+footer span {
+    color: var(--blue);
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    body {
+        font-size: 18px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 8px;
+        font-size: 16px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .profile-photo {
+        width: 185px;
+        height: 185px;
+        object-position: center top;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .section-title {
+        font-size: 34px;
+    }
+
+    .card {
+        padding: 23px;
+    }
+
+    .card h3 {
+        font-size: 23px;
+    }
+
+    .card p,
+    .about-text p {
+        font-size: 18px;
+    }
+
+    .skill-info {
+        font-size: 18px;
+    }
+
+    section {
+        padding: 65px 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">Ashu Maurya</div>
+
+            <div>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+    <div class="container hero-content">
+
+        <img
+            src="images/ashu.jpg"
+            alt="Ashu Maurya"
+            class="profile-photo"
+        >
+
+        <h1>Hello, I'm <span>Ashu Maurya</span></h1>
+
+        <h2>B.Tech Student | Aspiring Software Developer</h2>
+
+        <p>
+            Welcome to my personal portfolio.
+            I am learning coding, web development
+            and exploring new technologies.
+        </p>
+
+        <a href="#about" class="btn">Explore My Profile</a>
+
+        <a
+            href="https://github.com/ashuashish63"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-outline"
+        >
+            My GitHub
+        </a>
+
+    </div>
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+    <div class="container">
+
+        <h2 class="section-title">About <span>Me</span></h2>
+
+        <div class="about-text card">
+
+            <p>
+                My name is Ashu Maurya. I am a B.Tech
+                second-year student at Galgotias College
+                of Engineering & Technology, Greater Noida.
+            </p>
+
+            <p>
+                I am interested in programming, web development
+                and Android Studio. I enjoy learning new skills
+                and improving my technical knowledge.
+            </p>
+
+            <p>
+                My career goal is to become a Software Developer
+                and build useful technology projects.
+            </p>
+
+        </div>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education">
+    <div class="container">
+
+        <h2 class="section-title">My <span>Education</span></h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>B.Tech</h3>
+                <p>Second Year</p>
+                <p>Galgotias College of Engineering & Technology</p>
+                <p>Greater Noida, Uttar Pradesh</p>
+            </div>
+
+            <div class="card">
+                <h3>Career Goal</h3>
+                <p>Software Developer</p>
+                <p>Interested in programming and modern technologies.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+    <div class="container">
+
+        <h2 class="section-title">My <span>Skills</span></h2>
+
+        <div class="card">
+
+            <div class="skill">
+                <div class="skill-info">
+                    <span>HTML</span>
+                    <span>Learning</span>
+                </div>
+                <div class="progress">
+                    <div style="width: 35%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-info">
+                    <span>CSS</span>
+                    <span>Learning</span>
+                </div>
+                <div class="progress">
+                    <div style="width: 25%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-info">
+                    <span>Python</span>
+                    <span>Beginner</span>
+                </div>
+                <div class="progress">
+                    <div style="width: 15%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-info">
+                    <span>Web Development</span>
+                    <span>Learning</span>
+                </div>
+                <div class="progress">
+                    <div style="width: 20%"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+    <div class="container">
+
+        <h2 class="section-title">My <span>Projects</span></h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Personal Portfolio</h3>
+                <p>
+                    My personal profile website built using
+                    HTML and CSS.
+                </p>
+                <p>Status: In Progress</p>
+            </div>
+
+            <div class="card">
+                <h3>Future Projects</h3>
+                <p>
+                    I am learning programming and planning
+                    to build more projects.
+                </p>
+                <p>Status: Coming Soon</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+    <div class="container">
+
+        <h2 class="section-title">Contact <span>Me</span></h2>
+
+        <div class="contact-box card">
+
+            <p class="contact-intro">
+                Have a question? Send me a message on WhatsApp.
+            </p>
+
+            <form id="contactForm">
+
+                <input
+                    type="text"
+                    id="visitorName"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="visitorEmail"
+                    placeholder="Your Email"
+                    required
+                >
+
+                <textarea
+                    id="visitorMessage"
+                    placeholder="Write your message..."
+                    required
+                ></textarea>
+
+                <button type="submit">
+                    Send Message on WhatsApp
+                </button>
+
+            </form>
+
+            <a
+                class="whatsapp"
+                href="https://wa.me/916393879901"
+                target="_blank"
+                rel="noopener"
+            >
+                Chat with me on WhatsApp
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    <p>© 2026 <span>Ashu Maurya</span>. All Rights Reserved.</p>
+    <p>Designed with HTML & CSS</p>
+</footer>
+
+<!-- WHATSAPP FORM SCRIPT -->
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("visitorName").value;
+    const email = document.getElementById("visitorEmail").value;
+    const message = document.getElementById("visitorMessage").value;
+
+    const phone = "916393879901";
+
+    const text =
+        "Hello Ashu Maurya!" +
+        "\nName: " + name +
+        "\nEmail: " + email +
+        "\nMessage: " + message;
+
+    const url =
+        "https://wa.me/" + phone +
+        "?text=" + encodeURIComponent(text);
+
+    window.open(url, "_blank");
+});
+</script>
+
+</body>
+</html>
